@@ -1,0 +1,20 @@
+Package: createdatasets
+Type: Package
+Title: Download and preprocess common benchmark dataset for use in
+    reproduceable simulation studies
+Version: 0.1
+Date: 2014-09-08
+Authors@R: c(person("Jesse", "Krijthe", role = c("aut", "cre"),
+    email = "jkrijthe@gmail.com"))
+Author: Jesse Krijthe <jkrijthe@gmail.com>
+Maintainer: Jesse Krijthe <jkrijthe@gmail.com>
+Description: This package allows one to download (if neccesary) and preprocess
+    benchmark datasets from the UCI machine learning repository and other
+    sources for the use in evaluating classification and regression methods.
+    These functions can be helpful in setting up simulation studies that can be
+    easily reproduced by others.
+License: GPL (>= 2)
+Depends:
+    data.table
+Suggests:
+    R.matlab
