@@ -5,7 +5,7 @@
 #' First 60000 is train set, last 10000 is test set.
 #' 
 #' formula(Class~.)
-#' 
+#' @export
 createMNIST<-function(file="MNIST.rds",write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {

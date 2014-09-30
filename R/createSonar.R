@@ -6,6 +6,7 @@
 #' 
 #' @param file character; path/filename to write RData file to
 #' @param write logical; should the dataset be written to disk? (default: FALSE)
+#' @export
 createSonar<-function(file="sonar.rds",write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {

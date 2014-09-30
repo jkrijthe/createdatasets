@@ -15,6 +15,7 @@
 #' @param read logical; should we try to read the dataset from the specified location first? (default: TRUE)
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes}
+#' @export
 createDiabetes<-function(file="diabetes.rds",write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {

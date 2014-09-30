@@ -2,9 +2,10 @@
 #' 
 #' Task: formula(Class~.)
 #' 
-#' @example
+#' @examples
 #' d<-createGaussianClass(n=100,var=0.1)
 #' plot(d$V1,d$V2,col=d$Class,asp=1)
+#' @export
 createGaussianClass<-function(n=10000,d=2,var=1) {
   require(MASS)
   X<-rbind(mvrnorm(n/2,rep(-1,d),diag(rep(var,d))),mvrnorm(n/2,rep(1,d),diag(rep(var,d))))

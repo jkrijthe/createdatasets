@@ -12,6 +12,7 @@
 #' @inheritParams createDiabetes
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Abalone}
+#' @export
 createAbalone<-function(file="abalone.rds",write=TRUE,read=TRUE) {
   require(data.table)
   if (!read | !file.exists(file)) {
