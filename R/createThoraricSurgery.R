@@ -19,7 +19,7 @@
 #' 16. AGE: Age at surgery (numeric) 
 #' 17. Risk1Y: 1 year survival period - (T)rue value if died (T,F) 
 #' 
-#' Task: formula(Risk1Y ~ .)
+#' Task: formula(Risk1Yr ~ .)
 #' 
 #' @references Zieba, M., Tomczak, J. M., Lubicz, M., & {'S}wi{k{a}}tek J. (2013). Boosted SVM for extracting rules from imbalanced data in application to prediction of the post-operative life expectancy in the lung cancer patients. Applied Soft Computing.
 #'  

@@ -34,7 +34,6 @@ createFertility<-function(file="fertility.rds",write=TRUE,read=TRUE) {
     data$ChildishDiseases <- factor(data$ChildishDiseases,levels=0:1,labels=c("Yes","No")) #Note: may be switched
     data$Trauma <- factor(data$Trauma,levels=0:1,labels=c("Yes","No")) #Note: may be switched
     data$Surgery <- factor(data$Surgery,levels=0:1,labels=c("Yes","No")) #Note: may be switched
-    data$Surgery <- factor(data$Surgery,levels=0:1,labels=c("Yes","No")) #Note: may be switched
     data$RecentFever <- factor(data$RecentFever,levels=-1:1,labels=c("<3 Months",">3 Months","No"))
     data$AlcoholConsumption<-ordered(data$AlcoholConsumption,levels=c(0.2,0.4,0.6,0.8,1),labels=c("SeveralDay","EveryDay","SeveralWeek","OnceWeek","Never"))
     data$Smoking<- ordered(data$Smoking,levels=-1:1,labels=c("Never","Occasional","Daily"))
