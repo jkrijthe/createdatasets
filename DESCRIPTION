@@ -17,4 +17,5 @@ License: GPL (>= 2)
 Depends:
     data.table
 Suggests:
-    R.matlab
+    R.matlab,
+    foreign
