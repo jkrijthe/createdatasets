@@ -3,7 +3,7 @@
 \alias{createYeast}
 \title{Create Yeast Protein Localization dataset}
 \usage{
-createYeast(file = "yeast.rds", write = TRUE, read = TRUE)
+createYeast(file = getfilepath("yeast.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

@@ -8,7 +8,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Spambase}
 #' @export
-createSpambase<-function(file="spambase.rds",write=TRUE,read=TRUE) {
+createSpambase<-function(file=getfilepath("spambase.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.data")

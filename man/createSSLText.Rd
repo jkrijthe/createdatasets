@@ -3,7 +3,8 @@
 \alias{createSSLText}
 \title{Create SSL Text dataset from the SSL benchmarks}
 \usage{
-createSSLText(file = "SSLText.rds", write = TRUE, read = TRUE)
+createSSLText(file = getfilepath("SSLText.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

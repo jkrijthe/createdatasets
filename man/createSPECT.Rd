@@ -3,7 +3,7 @@
 \alias{createSPECT}
 \title{Create SPECT dataset}
 \usage{
-createSPECT(file = "SPECT.rds", write = TRUE, read = TRUE)
+createSPECT(file = getfilepath("SPECT.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

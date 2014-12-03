@@ -3,7 +3,8 @@
 \alias{createCovertype}
 \title{Create Covertype dataset}
 \usage{
-createCovertype(file = "covertype.rds", write = TRUE, read = TRUE)
+createCovertype(file = getfilepath("covertype.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

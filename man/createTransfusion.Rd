@@ -3,7 +3,8 @@
 \alias{createTransfusion}
 \title{Create Blood Transfusion dataset}
 \usage{
-createTransfusion(file = "transfusion.rds", write = TRUE, read = TRUE)
+createTransfusion(file = getfilepath("transfusion.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

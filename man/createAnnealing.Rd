@@ -3,7 +3,8 @@
 \alias{createAnnealing}
 \title{Create Steel Annealing dataset}
 \usage{
-createAnnealing(file = "annealing.rds", write = TRUE, read = TRUE)
+createAnnealing(file = getfilepath("annealing.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

@@ -3,7 +3,7 @@
 \alias{createMNIST}
 \title{Create MNIST digit recognition dataset}
 \usage{
-createMNIST(file = "MNIST.rds", write = TRUE, read = TRUE)
+createMNIST(file = getfilepath("MNIST.rds"), write = TRUE, read = TRUE)
 }
 \description{
 Code heavily inspired by https://gist.github.com/brendano/39760

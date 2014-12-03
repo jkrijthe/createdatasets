@@ -22,7 +22,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/ILPD+(Indian+Liver+Patient+Dataset)}
 #' @export
-createIndianLiverPatient<-function(file="indianliverpatient.rds",write=TRUE,read=TRUE) {
+createIndianLiverPatient<-function(file=getfilepath("indianliverpatient.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/00225/Indian%20Liver%20Patient%20Dataset%20(ILPD).csv")

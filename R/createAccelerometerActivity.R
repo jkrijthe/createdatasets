@@ -10,7 +10,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer}
 #' @export
-createAccelerometerActivity<-function(file="accelerometeractivity.rds",write=TRUE,read=TRUE) {
+createAccelerometerActivity<-function(file=getfilepath("accelerometeractivity.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     tmp <- tempfile()

@@ -3,7 +3,8 @@
 \alias{createHaberman}
 \title{Create Haberman breast cancer survival dataset}
 \usage{
-createHaberman(file = "haberman.rds", write = TRUE, read = TRUE)
+createHaberman(file = getfilepath("haberman.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

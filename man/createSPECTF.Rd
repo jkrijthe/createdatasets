@@ -3,7 +3,7 @@
 \alias{createSPECTF}
 \title{Create SPECTF dataset}
 \usage{
-createSPECTF(file = "SPECTF.rds", write = TRUE, read = TRUE)
+createSPECTF(file = getfilepath("SPECTF.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

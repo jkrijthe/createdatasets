@@ -3,7 +3,7 @@
 \alias{createBCI}
 \title{Create BCI dataset from the SSL benchmarks}
 \usage{
-createBCI(file = "BCI.rds", write = TRUE, read = TRUE)
+createBCI(file = getfilepath("BCI.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

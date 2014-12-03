@@ -22,7 +22,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Fertility}
 #' @export
-createFertility<-function(file="fertility.rds",write=TRUE,read=TRUE) {
+createFertility<-function(file=getfilepath("fertility.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/00244/fertility_Diagnosis.txt")

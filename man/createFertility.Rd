@@ -3,7 +3,8 @@
 \alias{createFertility}
 \title{Create Fertility Diagnosis dataset}
 \usage{
-createFertility(file = "fertility.rds", write = TRUE, read = TRUE)
+createFertility(file = getfilepath("fertility.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

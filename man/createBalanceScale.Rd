@@ -3,7 +3,8 @@
 \alias{createBalanceScale}
 \title{Balance Scale dataset}
 \usage{
-createBalanceScale(file = "balancescale.rds", write = TRUE, read = TRUE)
+createBalanceScale(file = getfilepath("balancescale.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

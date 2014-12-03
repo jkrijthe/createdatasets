@@ -3,7 +3,8 @@
 \alias{createCensusIncome}
 \title{Census Income prediction (Adult) dataset}
 \usage{
-createCensusIncome(file = "censusincome.rds", write = TRUE, read = TRUE)
+createCensusIncome(file = getfilepath("censusincome.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

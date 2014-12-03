@@ -3,7 +3,7 @@
 \alias{createSonar}
 \title{Create Sonar dataset}
 \usage{
-createSonar(file = "sonar.rds", write = TRUE, read = TRUE)
+createSonar(file = getfilepath("sonar.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

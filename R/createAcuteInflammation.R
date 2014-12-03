@@ -21,7 +21,7 @@
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Acute+Inflammations}
 #' 
 #' @export
-createAcuteInflammation<-function(file="acuteinflammation.rds",write=TRUE,read=TRUE) {
+createAcuteInflammation<-function(file=getfilepath("acuteinflammation.rds"),write=TRUE,read=TRUE) {
   require(data.table)
   if (!read | !file.exists(file)) {
     data<-data.table(read.delim("http://archive.ics.uci.edu/ml/machine-learning-databases/acute/diagnosis.data",fileEncoding="UTF-16LE",header = FALSE,dec = ","))

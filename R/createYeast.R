@@ -35,7 +35,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/machine-learning-databases/yeast/}
 #' @export
-createYeast<-function(file="yeast.rds",write=TRUE,read=TRUE) {
+createYeast<-function(file=getfilepath("yeast.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- data.table(read.table("http://archive.ics.uci.edu/ml/machine-learning-databases/yeast/yeast.data"))

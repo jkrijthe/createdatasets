@@ -3,7 +3,8 @@
 \alias{createBanknote}
 \title{Create Banknote Authentication dataset}
 \usage{
-createBanknote(file = "banknote.rds", write = TRUE, read = TRUE)
+createBanknote(file = getfilepath("banknote.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

@@ -8,7 +8,7 @@
 #' @param file character; path/filename to write RData file to
 #' @param write logical; should the dataset be written to disk? (default: FALSE)
 #' @export
-createCOIL2 <- function(file="COIL2.rds",write=TRUE,read=TRUE) {
+createCOIL2 <- function(file=getfilepath("COIL2.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     require(R.matlab)

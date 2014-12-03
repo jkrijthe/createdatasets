@@ -3,7 +3,7 @@
 \alias{createCOIL2}
 \title{Create COIL2 dataset from the SSL benchmarks}
 \usage{
-createCOIL2(file = "COIL2.rds", write = TRUE, read = TRUE)
+createCOIL2(file = getfilepath("COIL2.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

@@ -13,7 +13,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Abalone}
 #' @export
-createAbalone<-function(file="abalone.rds",write=TRUE,read=TRUE) {
+createAbalone<-function(file=getfilepath("abalone.rds"),write=TRUE,read=TRUE) {
   require(data.table)
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data")

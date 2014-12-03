@@ -3,7 +3,7 @@
 \alias{createAccelerometerActivity}
 \title{Create Accelerometer Activity Recognition dataset}
 \usage{
-createAccelerometerActivity(file = "accelerometeractivity.rds",
+createAccelerometerActivity(file = getfilepath("accelerometeractivity.rds"),
   write = TRUE, read = TRUE)
 }
 \arguments{

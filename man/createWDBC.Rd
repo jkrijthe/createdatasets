@@ -3,7 +3,7 @@
 \alias{createWDBC}
 \title{Create Wisconsin Breast Cancer Diagnosis}
 \usage{
-createWDBC(file = "WDBC.rds", write = TRUE, read = TRUE)
+createWDBC(file = getfilepath("WDBC.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

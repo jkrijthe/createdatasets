@@ -3,7 +3,7 @@
 \alias{createEEGEye}
 \title{Create EEG Eye State dataset}
 \usage{
-createEEGEye(file = "eegeye.rds", write = TRUE, read = TRUE)
+createEEGEye(file = getfilepath("eegeye.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

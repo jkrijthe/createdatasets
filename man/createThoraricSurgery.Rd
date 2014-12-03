@@ -3,8 +3,8 @@
 \alias{createThoraricSurgery}
 \title{Create Thoraric Surgery dataset}
 \usage{
-createThoraricSurgery(file = "thoraricsurgery.rds", write = TRUE,
-  read = TRUE)
+createThoraricSurgery(file = getfilepath("thoraricsurgery.rds"),
+  write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

@@ -3,8 +3,8 @@
 \alias{createContraceptiveMethod}
 \title{Create Contraceptive Method Choice dataset}
 \usage{
-createContraceptiveMethod(file = "contraceptivemethod.rds", write = TRUE,
-  read = TRUE)
+createContraceptiveMethod(file = getfilepath("contraceptivemethod.rds"),
+  write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

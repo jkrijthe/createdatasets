@@ -12,7 +12,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Haberman's+Survival}
 #' @export
-createHaberman<-function(file="haberman.rds",write=TRUE,read=TRUE) {
+createHaberman<-function(file=getfilepath("haberman.rds"),write=TRUE,read=TRUE) {
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/haberman/haberman.data")
     setnames(data,colnames(data),c("Age","YearOperation","AxillaryNodes","Survival"))

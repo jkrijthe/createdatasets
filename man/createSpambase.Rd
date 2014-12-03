@@ -3,7 +3,8 @@
 \alias{createSpambase}
 \title{Create Spambase dataset}
 \usage{
-createSpambase(file = "spambase.rds", write = TRUE, read = TRUE)
+createSpambase(file = getfilepath("spambase.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

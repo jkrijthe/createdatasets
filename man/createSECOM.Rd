@@ -3,7 +3,7 @@
 \alias{createSECOM}
 \title{Create SECOM dataset}
 \usage{
-createSECOM(file = "SECOM.rds", write = TRUE, read = TRUE)
+createSECOM(file = getfilepath("SECOM.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

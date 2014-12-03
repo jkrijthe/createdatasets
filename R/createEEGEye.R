@@ -9,7 +9,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/EEG+Eye+State}
 #' @export
-createEEGEye<-function(file="eegeye.rds",write=TRUE,read=TRUE) {
+createEEGEye<-function(file=getfilepath("eegeye.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     require(foreign)

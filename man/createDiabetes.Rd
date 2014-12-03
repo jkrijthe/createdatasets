@@ -3,7 +3,8 @@
 \alias{createDiabetes}
 \title{Pima Indians Diabetes dataset}
 \usage{
-createDiabetes(file = "diabetes.rds", write = TRUE, read = TRUE)
+createDiabetes(file = getfilepath("diabetes.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

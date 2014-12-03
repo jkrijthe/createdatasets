@@ -25,7 +25,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Contraceptive+Method+Choice}
 #' @export
-createContraceptiveMethod<-function(file="contraceptivemethod.rds",write=TRUE,read=TRUE) {
+createContraceptiveMethod<-function(file=getfilepath("contraceptivemethod.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/cmc/cmc.data")

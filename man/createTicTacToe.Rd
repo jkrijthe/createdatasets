@@ -3,7 +3,8 @@
 \alias{createTicTacToe}
 \title{Create Tic-Tac-Toe Endgame dataset}
 \usage{
-createTicTacToe(file = "tictactoe.rds", write = TRUE, read = TRUE)
+createTicTacToe(file = getfilepath("tictactoe.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

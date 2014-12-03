@@ -3,7 +3,7 @@
 \alias{createUSPS}
 \title{Create USPS dataset from the SSL benchmarks}
 \usage{
-createUSPS(file = "USPS.rds", write = TRUE, read = TRUE)
+createUSPS(file = getfilepath("USPS.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

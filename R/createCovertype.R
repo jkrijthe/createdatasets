@@ -11,7 +11,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Covertype}
 #' @export
-createCovertype <- function(file="covertype.rds",write=TRUE,read=TRUE) {
+createCovertype <- function(file=getfilepath("covertype.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     tmp<-tempfile()

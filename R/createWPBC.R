@@ -13,7 +13,8 @@
 #' 
 #' @param file character; path/filename to write RData file to
 #' @param write logical; should the dataset be written to disk? (default: FALSE)
-createWPBC<-function(file="WPBC.RData",write=FALSE) {
+#' @export
+createWPBC<-function(file=getfilepath("WPBC.RData"),write=FALSE) {
   require(data.table)
   data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wpbc.data",na.strings=c("NA","?"))
   

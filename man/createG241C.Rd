@@ -3,7 +3,7 @@
 \alias{createG241C}
 \title{Create G241C dataset from the SSL benchmarks}
 \usage{
-createG241C(file = "g241c.rds", write = TRUE, read = TRUE)
+createG241C(file = getfilepath("g241c.rds"), write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

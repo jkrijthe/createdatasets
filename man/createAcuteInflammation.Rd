@@ -3,8 +3,8 @@
 \alias{createAcuteInflammation}
 \title{Create Acute Inflamations dataset}
 \usage{
-createAcuteInflammation(file = "acuteinflammation.rds", write = TRUE,
-  read = TRUE)
+createAcuteInflammation(file = getfilepath("acuteinflammation.rds"),
+  write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

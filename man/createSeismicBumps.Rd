@@ -3,7 +3,8 @@
 \alias{createSeismicBumps}
 \title{Create Seismic bump dataset}
 \usage{
-createSeismicBumps(file = "seismicbumps.rds", write = TRUE, read = TRUE)
+createSeismicBumps(file = getfilepath("seismicbumps.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

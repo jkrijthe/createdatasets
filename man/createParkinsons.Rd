@@ -3,7 +3,8 @@
 \alias{createParkinsons}
 \title{Create Parkinsons dataset}
 \usage{
-createParkinsons(file = "parkinsons.rds", write = TRUE, read = TRUE)
+createParkinsons(file = getfilepath("parkinsons.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

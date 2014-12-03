@@ -3,7 +3,8 @@
 \alias{createIonosphere}
 \title{Create Ionosphere dataset}
 \usage{
-createIonosphere(file = "ionosphere.rds", write = TRUE, read = TRUE)
+createIonosphere(file = getfilepath("ionosphere.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

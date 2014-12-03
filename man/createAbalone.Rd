@@ -3,7 +3,8 @@
 \alias{createAbalone}
 \title{Abalone Age prediction}
 \usage{
-createAbalone(file = "abalone.rds", write = TRUE, read = TRUE)
+createAbalone(file = getfilepath("abalone.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

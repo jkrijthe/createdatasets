@@ -3,7 +3,7 @@
 \alias{createWPBC}
 \title{Create Wisconsin Breast Cancer Prognosis}
 \usage{
-createWPBC(file = "WPBC.RData", write = FALSE)
+createWPBC(file = getfilepath("WPBC.RData"), write = FALSE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

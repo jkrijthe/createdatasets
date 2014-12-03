@@ -3,8 +3,8 @@
 \alias{createMammographicMass}
 \title{Create Mammographic Mass dataset}
 \usage{
-createMammographicMass(file = "mammographicmass.rds", write = TRUE,
-  read = TRUE)
+createMammographicMass(file = getfilepath("mammographicmass.rds"),
+  write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

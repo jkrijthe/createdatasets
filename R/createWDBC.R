@@ -8,7 +8,7 @@
 #' @param file character; path/filename to write RData file to
 #' @param write logical; should the dataset be written to disk? (default: FALSE)
 #' @export
-createWDBC<-function(file="WDBC.rds",write=TRUE,read=TRUE) {
+createWDBC<-function(file=getfilepath("WDBC.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data")

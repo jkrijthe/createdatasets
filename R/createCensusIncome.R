@@ -11,7 +11,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Census+Income}
 #' @export
-createCensusIncome<-function(file="censusincome.rds",write=TRUE,read=TRUE) {
+createCensusIncome<-function(file=getfilepath("censusincome.rds"),write=TRUE,read=TRUE) {
   require(data.table)
   if (!read | !file.exists(file)) {
     data<-read.csv("http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data", header=FALSE,na.strings = c("?"," ?"),stringsAsFactors = TRUE,strip.white=TRUE)

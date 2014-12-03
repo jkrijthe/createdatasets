@@ -16,7 +16,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes}
 #' @export
-createDiabetes<-function(file="diabetes.rds",write=TRUE,read=TRUE) {
+createDiabetes<-function(file=getfilepath("diabetes.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data")

@@ -16,7 +16,7 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/banknote+authentication}
 #' @export
-createBanknote<-function(file="banknote.rds",write=TRUE,read=TRUE) {
+createBanknote<-function(file=getfilepath("banknote.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/00267/data_banknote_authentication.txt")

@@ -3,8 +3,8 @@
 \alias{createIndianLiverPatient}
 \title{Create Indian Liver Patient dataset}
 \usage{
-createIndianLiverPatient(file = "indianliverpatient.rds", write = TRUE,
-  read = TRUE)
+createIndianLiverPatient(file = getfilepath("indianliverpatient.rds"),
+  write = TRUE, read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

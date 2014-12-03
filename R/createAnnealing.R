@@ -14,7 +14,7 @@
 #' randomForest(Class~.,na.roughfix(data[,which(sapply(1:39,function(x) {!all(is.na(data[,x,with=FALSE]))})),with=FALSE]))
 #' 
 #' @export
-createAnnealing<-function(file="annealing.rds",write=TRUE,read=TRUE) {
+createAnnealing<-function(file=getfilepath("annealing.rds"),write=TRUE,read=TRUE) {
   require(data.table)
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/annealing/anneal.data",na.strings = "?",colClasses=list("factor"=39),stringsAsFactors = TRUE)

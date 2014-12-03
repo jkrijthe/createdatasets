@@ -19,7 +19,7 @@
 #' 
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Tic-Tac-Toe+Endgame}
 #' @export
-createTicTacToe<-function(file="tictactoe.rds",write=TRUE,read=TRUE) {
+createTicTacToe<-function(file = getfilepath("tictactoe.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     require(foreign)

@@ -3,7 +3,8 @@
 \alias{createBankMarketing}
 \title{Create Bank Marketing dataset}
 \usage{
-createBankMarketing(file = "bankmarketing.rds", write = TRUE, read = TRUE)
+createBankMarketing(file = getfilepath("bankmarketing.rds"), write = TRUE,
+  read = TRUE)
 }
 \arguments{
 \item{file}{character; path/filename to write data file to}

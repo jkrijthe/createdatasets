@@ -6,7 +6,7 @@
 #' 
 #' formula(Class~.)
 #' @export
-createMNIST<-function(file="MNIST.rds",write=TRUE,read=TRUE) {
+createMNIST<-function(file=getfilepath("MNIST.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
     con<-gzcon(url("http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz","rb"))

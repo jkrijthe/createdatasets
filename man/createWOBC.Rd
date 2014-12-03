@@ -3,7 +3,7 @@
 \alias{createWOBC}
 \title{Create Wisconsin Breast Cancer Diagnosis (Original)}
 \usage{
-createWOBC(file = "WOBC.RData", write = FALSE)
+createWOBC(file = getfilepath("WOBC.RData"), write = FALSE)
 }
 \arguments{
 \item{file}{character; path/filename to write RData file to}

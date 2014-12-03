@@ -3,7 +3,8 @@
 \alias{createClimateSimulationCrashes}
 \title{Create Climate Model Failure dataset}
 \usage{
-createClimateSimulationCrashes(file = "climatesimulationcrashes.rds",
+
+  createClimateSimulationCrashes(file = getfilepath("climatesimulationcrashes.rds"),
   write = TRUE, read = TRUE)
 }
 \arguments{
