@@ -4,3 +4,4 @@
 .Rhistory
 .Rbuildignore
 .Rproj.user
+*.RData
