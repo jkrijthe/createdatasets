@@ -14,8 +14,7 @@ createSSLText(file = getfilepath("SSLText.rds"), write = TRUE,
 \description{
 Task:
  formula(Class ~ .)
-}
-\details{
+Note: output is not a datatable but a sparse Matrix
 Cite: Chapelle
 }
 

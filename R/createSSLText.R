@@ -2,7 +2,7 @@
 #'
 #'  Task:
 #'  formula(Class ~ .)
-#'
+#' Note: output is not a datatable but a sparse Matrix
 #' Cite: Chapelle
 #'
 #' @param file character; path/filename to write RData file to
@@ -13,13 +13,13 @@ createSSLText <- function(file=getfilepath("SSLText.rds"),write=TRUE,read=TRUE) 
   if (!read | !file.exists(file)) {
     require(R.matlab)
     require(data.table)
-    warning("TODO")
-#     ds<-readMat(url("http://olivier.chapelle.cc/ssl-book/SSL,set=9,data.mat"))
-#     data<-list(X=ds$X,Class=factor(ds$y))
-#     
-#     if (write) {
-#       saveRDS(data, file=file)
-#     }
+
+    ds<-readMat(url("http://olivier.chapelle.cc/ssl-book/SSL,set=9,data.mat"))
+    data<-list(X=ds$X,Class=factor(ds$y))
+    
+    if (write) {
+      saveRDS(data, file=file)
+    }
   } else {
     data<-readRDS(file)
   }
