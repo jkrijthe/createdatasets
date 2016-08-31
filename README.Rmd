@@ -1,0 +1,17 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+[![Travis-CI Build Status](https://travis-ci.org/jkrijthe/createdatasets.png?branch=master)](https://travis-ci.org/jkrijthe/createdatasets)
+[![codecov.io](https://codecov.io/github/jkrijthe/createdatasets/coverage.svg?branch=master)](https://codecov.io/github/jkrijthe/createdatasets?branch=master)
