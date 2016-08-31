@@ -5,6 +5,9 @@
 #' First 60000 is train set, last 10000 is test set.
 #' 
 #' formula(Class~.)
+#' @examples
+#' #as.matrix(data[1040,-785])  %>% matrix(28,28)  %>%  Matrix    %>% t%>% image(asp=1)
+#' @inheritParams createDiabetes
 #' @export
 createMNIST<-function(file=getfilepath("MNIST.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
@@ -25,7 +28,7 @@ createMNIST<-function(file=getfilepath("MNIST.rds"),write=TRUE,read=TRUE) {
     y<-c(y,read_MNIST_bin_labels(con))
     close(con)
   
-    data <- data.table(data, Class=factor(y))
+    data <- data.frame(data, Class=factor(y))
     
     if (write) {
       saveRDS(data, file=file)
@@ -53,4 +56,4 @@ read_MNIST_bin_labels<-function(con) {
   y <- readBin(con,'integer',n=n,size=1,signed=F)
   y
 }
-# image(t(matrix(ret$x[23,],28,28)),asp=1)
+

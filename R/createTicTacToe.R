@@ -22,7 +22,7 @@
 createTicTacToe<-function(file = getfilepath("tictactoe.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    require(foreign)
+    requireNamespace("foreign")
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/tic-tac-toe/tic-tac-toe.data",header = FALSE)
     setnames(data,colnames(data),c("top-left-square","top-middle-square","top-right-square","middle-left-square","middle-middle-square","middle-right-square","bottom-left-square","bottom-middle-square","bottom-right-square","Class"))
     

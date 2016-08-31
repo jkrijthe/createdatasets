@@ -22,11 +22,10 @@
 #' 
 #' @export
 createAcuteInflammation<-function(file=getfilepath("acuteinflammation.rds"),write=TRUE,read=TRUE) {
-  require(data.table)
+  
   if (!read | !file.exists(file)) {
-    data<-data.table(read.delim("http://archive.ics.uci.edu/ml/machine-learning-databases/acute/diagnosis.data",fileEncoding="UTF-16LE",header = FALSE,dec = ","))
-    
-    setnames(data,colnames(data),c("Temperature","Nausea","LumbarPain","UrinePushing","MicturitionPains","BurningUrethra","Inflammation","Nephritis"))
+    data<-data.frame(read.delim("http://archive.ics.uci.edu/ml/machine-learning-databases/acute/diagnosis.data",fileEncoding="UTF-16LE",header = FALSE,dec = ","))
+    colnames(data) <- c("Temperature","Nausea","LumbarPain","UrinePushing","MicturitionPains","BurningUrethra","Inflammation","Nephritis")
     
     if (write) {
       saveRDS(data, file=file)

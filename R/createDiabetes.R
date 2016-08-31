@@ -19,8 +19,8 @@
 createDiabetes<-function(file=getfilepath("diabetes.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data")
-    setnames(data,colnames(data),c("TimesPregnant","Glucose","DiastolicBloodPressure","Skinfold","Insulin","BMI","Pedigree","Age","Diabetes"))
+    data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data",col_names=c("TimesPregnant","Glucose","DiastolicBloodPressure","Skinfold","Insulin","BMI","Pedigree","Age","Diabetes"))
+    
     data$DiastolicBloodPressure[data$DiastolicBloodPressure==0]<-NA
     data$Glucose[data$Glucose==0]<-NA
     data$Skinfold[data$Skinfold==0]<-NA

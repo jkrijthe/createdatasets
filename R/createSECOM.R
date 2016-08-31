@@ -14,7 +14,7 @@
 createSECOM<-function(file=getfilepath("SECOM.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    require(foreign)
+    requireNamespace("foreign")
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/secom/secom.data",na.strings = c(NaN,"NaN"),sep=" ",header=FALSE)
     
     # Convert NaN to NA (this only works because all columns are numeric)

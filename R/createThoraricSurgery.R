@@ -30,7 +30,7 @@
 createThoraricSurgery<-function(file=getfilepath("thoraricsurgery.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    require(foreign)
+    requireNamespace("foreign")
     data <- data.table(read.arff("http://archive.ics.uci.edu/ml/machine-learning-databases/00277/ThoraricSurgery.arff"))
     
     

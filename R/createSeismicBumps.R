@@ -13,7 +13,7 @@
 createSeismicBumps<-function(file=getfilepath("seismicbumps.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    require(foreign)
+    requireNamespace("foreign")
     data<-read.arff(url("http://archive.ics.uci.edu/ml/machine-learning-databases/00266/seismic-bumps.arff"))
     
     data<-data.table(data)

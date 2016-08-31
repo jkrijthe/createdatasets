@@ -12,7 +12,7 @@
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Census+Income}
 #' @export
 createCensusIncome<-function(file=getfilepath("censusincome.rds"),write=TRUE,read=TRUE) {
-  require(data.table)
+  
   if (!read | !file.exists(file)) {
     data<-read.csv("http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data", header=FALSE,na.strings = c("?"," ?"),stringsAsFactors = TRUE,strip.white=TRUE)
     data2<-read.csv("http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test", header=FALSE,na.strings = c("?"," ?"),stringsAsFactors = TRUE,strip.white=TRUE,skip=1)

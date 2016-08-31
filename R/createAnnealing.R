@@ -10,12 +10,9 @@
 #' @return The dataset as a \code{\link[data.table]{data.table}}
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Annealing}
 #' 
-#' @examples
-#' randomForest(Class~.,na.roughfix(data[,which(sapply(1:39,function(x) {!all(is.na(data[,x,with=FALSE]))})),with=FALSE]))
-#' 
 #' @export
 createAnnealing<-function(file=getfilepath("annealing.rds"),write=TRUE,read=TRUE) {
-  require(data.table)
+
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/annealing/anneal.data",na.strings = "?",colClasses=list("factor"=39),stringsAsFactors = TRUE)
     data2<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/annealing/anneal.test",na.strings = "?",colClasses=list("factor"=39),stringsAsFactors = TRUE)

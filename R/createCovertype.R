@@ -18,9 +18,9 @@ createCovertype <- function(file=getfilepath("covertype.rds"),write=TRUE,read=TR
     download.file("http://archive.ics.uci.edu/ml/machine-learning-databases/covtype/covtype.data.gz",tmp)
     data <- data.table(read.csv(gzfile(tmp)))
     
-    data[,Wilderness_Area:=apply(data[,11:14,with=FALSE],1,which.max)]
+    data[,"Wilderness_Area":=apply(data[,11:14,with=FALSE],1,which.max)]
     data[,11:14:=NULL]
-    data[,Soil_Type:=apply(data[,11:50,with=FALSE],1,which.max)]
+    data[,"Soil_Type":=apply(data[,11:50,with=FALSE],1,which.max)]
     data[,11:50:=NULL]
     setnames(data,colnames(data)[1:11],c("Elevation","Aspect","Slope","Horizontal_Distance_To_Hydrology","Vertical_Distance_To_Hydrology","Horizontal_Distance_To_Roadways","Hillshade_9am","Hillshade_Noon","Hillshade_3pm","Horizontal_Distance_To_Fire_Points","Cover_Type"))
     data$Wilderness_Area<-factor(data$Wilderness_Area,levels=1:4,labels=c("Rawah Wilderness Area","Neota Wilderness Area","Comanche Peak Wilderness Area","Cache la Poudre Wilderness Area"))

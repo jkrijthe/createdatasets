@@ -9,15 +9,13 @@
 #' @inheritParams createDiabetes
 #' @return List containing:
 #' \itemize{
-##'  \item{"X"}{ \code{\link{dgCMatrix}}; sparse matrix with count of unigram and bigram features}
+##'  \item{"X"}{ \code{dgCMatrix}; sparse matrix with count of unigram and bigram features}
 ##'  \item{"y"}{ numeric; star rating}
 ##'  \item{"domains"}{ factor; domain/category for each review}
 ##' }
 #' @seealso \code{\link{createAmazonSentiment}}, \url{http://www.cs.jhu.edu/~mdredze/datasets/sentiment/}
 #' @export
 createAmazonSentimentStars<-function(file=getfilepath("amazonsentimentstars.rds"),write=TRUE,read=TRUE) {
-  require(data.table)
-  require(Matrix)
   
   if (!read | !file.exists(file)) {
 
@@ -49,7 +47,7 @@ createAmazonSentimentStars<-function(file=getfilepath("amazonsentimentstars.rds"
     
     dfall<-rbindlist(dfs)
     
-    dfall[,words:=as.factor(words)]
+    dfall[,"words":=as.factor("words")]
     X<-sparseMatrix(i=as.integer(dfall$instances),j=as.integer(dfall$words),x=dfall$counts,dimnames=list(NULL,levels(dfall$words)))
   
     data<-list(X=X,y=labels,domains=domains)

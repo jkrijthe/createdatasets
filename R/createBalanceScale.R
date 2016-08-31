@@ -12,7 +12,7 @@
 #' @seealso \url{https://archive.ics.uci.edu/ml/datasets/Balance+Scale}
 #' @export
 createBalanceScale<-function(file=getfilepath("balancescale.rds"),write=TRUE,read=TRUE) {
-  require(data.table)
+
   if (!read | !file.exists(file)) {
     data<-fread("http://archive.ics.uci.edu/ml/machine-learning-databases/balance-scale/balance-scale.data")
 

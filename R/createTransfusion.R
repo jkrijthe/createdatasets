@@ -12,16 +12,15 @@
 #' 
 #' formula(Donated ~ .)
 #' 
-#' @param file character; path/filename to write RData file to
-#' @param write logical; should the dataset be written to disk? (default: FALSE)
+#' @inheritParams createDiabetes
 #' @export
 createTransfusion<-function(file=getfilepath("transfusion.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/blood-transfusion/transfusion.data")
+    data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/blood-transfusion/transfusion.data",col_types="iiiic")
     
-    setnames(data,colnames(data),c("Recency","Frequency","Monetary","Time","Donated"))
-    
+    colnames(data) <- c("Recency","Frequency","Monetary","Time","Donated")
+  
     data$Donated<-factor(data$Donated,levels=0:1,labels=c("No","Yes"))
     
     if (write) {

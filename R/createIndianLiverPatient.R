@@ -16,7 +16,7 @@
 #'10. A/G Ratio	Albumin and Globulin Ratio 
 #'11. Selector field used to split the data into two sets (labeled by the experts) 
 #' 
-#' @references Bendi Venkata Ramana, Prof. M. S. Prasad Babu and Prof. N. B. Venkateswarlu, Critical Comparative Study of Liver Patients from USA and INDIA: An Exploratory Analysis, International Journal of Computer Science Issues, ISSN :1694-0784, May 2012. 
+#' @references Bendi Venkata Ramana, Prof. M. S. Prasad Babu and Prof. N. B. Venkateswarlu, Critical Comparative Study of Liver Patients from USA and INDIA: An Exploratory Analysis, International Journal of Computer Science Issues, ISSN :1694-0784, May 2012. 
 #' 
 #' @inheritParams createDiabetes
 #' @return The dataset as a \code{\link[data.table]{data.table}}

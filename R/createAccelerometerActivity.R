@@ -15,8 +15,12 @@ createAccelerometerActivity<-function(file=getfilepath("accelerometeractivity.rd
   if (!read | !file.exists(file)) {
     tmp <- tempfile()
     data <- download.file("http://archive.ics.uci.edu/ml/machine-learning-databases/00287/Activity%20Recognition%20from%20Single%20Chest-Mounted%20Accelerometer.zip",tmp)
-    data<-rbindlist(lapply(1:15, function(i) {
+    data2<-rbindlist(lapply(1:15, function(i) {
       data.table(read.csv(unz(tmp, paste0("Activity Recognition from Single Chest-Mounted Accelerometer/",i,".csv")),sep=",",na.strings="unknown",header=FALSE,col.names=c("Sequence","x","y","z","Activity")),Participant=i)
+    }))
+    
+    data<-bind_rows(lapply(1:15, function(i) {
+      read_csv(unz(tmp, paste0("Activity Recognition from Single Chest-Mounted Accelerometer/",i,".csv")),na="unknown",col_names=c("Sequence","x","y","z","Activity")) %>% mutate(Participant=i)
     }))
                   
     data$Activity<-factor(data$Activity,levels=1:7,labels=c("Working at Computer"," Standing Up, Walking and Going updown stairs","Standing","Walking","Going UpDown Stairs","Walking and Talking with Someone", "Talking while Standing"))

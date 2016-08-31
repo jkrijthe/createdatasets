@@ -5,15 +5,14 @@
 #'
 #' Cite: Chapelle
 #'
-#' @param file character; path/filename to write RData file to
-#' @param write logical; should the dataset be written to disk? (default: FALSE)
+#' @inheritParams createDiabetes
 #' @export
 createCOIL2 <- function(file=getfilepath("COIL2.rds"),write=TRUE,read=TRUE) {
   # Check if the user forced the recreation of the datasets or whether the datafile is missing on disk
   if (!read | !file.exists(file)) {
-    require(R.matlab)
+    requireNamespace("R.matlab")
     ds<-readMat(url("http://olivier.chapelle.cc/ssl-book/SSL,set=3,data.mat"))
-    data<-data.table(ds$X,Class=factor(ds$y))
+    data<-data.frame(ds$X,Class=factor(ds$y))
     
     if (write) {
       saveRDS(data, file=file)

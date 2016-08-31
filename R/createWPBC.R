@@ -15,7 +15,7 @@
 #' @param write logical; should the dataset be written to disk? (default: FALSE)
 #' @export
 createWPBC<-function(file=getfilepath("WPBC.RData"),write=FALSE) {
-  require(data.table)
+  
   data <- fread("http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wpbc.data",na.strings=c("NA","?"))
   
   setnames(data,colnames(data),c("ID","Outcome","Time",paste0(rep(c("Mean","SD","Worst"),each=10),rep(c("Radius","Texture","Perimeter","Area","Smoothness","Compactness","Concavity","ConcavePoints","Symmetry","FractalDimension"),3)),"TumorSize","LymphNode"))
